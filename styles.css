@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)),
+    url("background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* Навбар */
+.nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background: url(./img/navbar.png);
+  z-index: 100;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-menu ul li .link {
+  text-decoration: none;
+  padding-bottom: 5px;
+  margin: 0 35px;
+  font-weight: 500;
+  font-size: 25px;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-menu-btn {
+  display: none;
+}
+
+/* Анимация кнопок в навбаре */
+.link {
+  position: relative;
+}
+
+.link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  width: 50%;
+  height: 3px;
+  margin: auto;
+  background: linear-gradient(45deg, #5aff15, #00b712);
+  transition: 0.3s ease;
+}
+
+.link:hover:after,
+.link:focus:after {
+  width: 100%;
+}
+
+/* Кнопка - Сайт колледжа */
+.nav-button .site-btn {
+  width: 140px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(90, 255, 20, 0.85);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.site-btn:hover {
+  scale: 1.05;
+  background: linear-gradient(45deg, #5aff15, #00b712);
+}
+
+.site-text {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Центр */
+.main-box {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  color: #fff;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.main-box img {
+  width: 10%;
+  filter: drop-shadow(3px 3px 10px #000000);
+}
+
+.main-box h1 {
+  margin: 30px 0 30px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-box p {
+  margin: 10px 0 40px;
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Кнопка - Центр */
+.main-btn {
+  position: relative;
+  display: block;
+  padding: 10px 45px;
+  margin: auto;
+  font-size: 20px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-btn:hover {
+  border: 1px solid #5aff15;
+  background: #00b712;
+  transition: 0.5s ease;
+}
+
+/* Адаптивный дизайн */
+@media only screen and (max-width: 786px) {
+  .nav-button {
+    display: none;
+  }
+  .nav-menu.responsive {
+    top: 100px;
+  }
+  .nav-menu {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: -800px;
+    width: 70%;
+    /* height: 90vh; */
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5%;
+    backdrop-filter: blur(20px);
+    transition: 0.3s;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-menu-btn {
+    display: block;
+    padding: 10px;
+    font-size: 25px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .nav-menu-btn i {
+    padding: 10px;
+    font-size: 25px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .nav-menu-btn i:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  .nav-logo img {
+	height: 100%;
+  }
+  .main-box {
+	width: 70%;  
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .header {
+    min-height: 100vh;
+  }
+  .nav-logo img {
+  	position: absolute;
+  	left: 40px;
+	max-height: 80%;
+  }
+  .main-box {
+	width: 95%;  
+  }
+}
