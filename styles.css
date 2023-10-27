@@ -42,7 +42,7 @@
   font-weight: 500;
   font-size: 25px;
   color: #fff;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-logo img {
@@ -167,7 +167,7 @@
     top: -800px;
     width: 70%;
     /* height: 90vh; */
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.35);
     border-radius: 5%;
     backdrop-filter: blur(20px);
     transition: 0.3s;
@@ -196,7 +196,7 @@
 	width: 70%;  
   }
   .nav-logo img {
-    margin-left: -25px;
+    margin-left: -15px;
   }
   .main-box img {
     display: none;
@@ -209,4 +209,5 @@
   .main-box {
 	width: 95%;
   }
+}
 }
