@@ -7,11 +7,8 @@ html, body {
 
 body {
   background-image: linear-gradient(to bottom, #ffffff, #5db87b3f); /* Градиент от жёлтого к оранжевому */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100vw; /* 100% ширины окна браузера */
-  height: 100vh; /* 100% высоты окна браузера */
+  background-size: 100% 100%;
+  
 }
 
 /* h1 {
