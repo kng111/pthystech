@@ -2,12 +2,16 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-repeat: no-repeat
+  
   /* font-family: '75blitzel', sans-serif; */
 }
 
 body {
-  background-image: linear-gradient(to bottom, #ffffff, #5db87b3f); /* Градиент от жёлтого к оранжевому */
-  background-size: 100% 100%;
+  background-image: linear-gradient(to bottom, #ffffff, #5db87b3f);
+  background-size: 100% 100%; /* Растягиваем фон на весь экран */
+  background-attachment: fixed; /* Фон не будет прокручиваться вместе с контентом */
+  font-family: '75blitzel', sans-serif;
   
 }
 
@@ -30,11 +34,16 @@ header {
   
 
 
-nav {
-  text-align: center;
-  margin: 20px 0;
-}
-
+  nav {
+    text-align: center;
+    margin: 20px 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-top: 15px;
+    padding-right: 20px; /* Добавляем отступ справа в 20 пикселей */
+    
+  }
+  
 .category-btn {
   font-size: 16px;
   margin: 0 10px;
@@ -44,7 +53,15 @@ nav {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  margin-right: 20px; /* Добавляем отступ справа */
 }
+
+  
+.category-btn:not(:last-child) {
+  margin-right: 10px; /* Добавляем отступ между кнопками кроме последней */
+}
+  
+  
 
 .category-btn:hover {
   background-color: #2a6bb165;
@@ -128,7 +145,25 @@ nav {
   font-size: 16px;
 }
 
-.menu .item:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+
+body {
+  scrollbar-width: thin; /* для Firefox */
+  scrollbar-color: transparent transparent; /* для Firefox */
 }
+
+/* Для WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+
+
+
