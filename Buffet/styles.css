@@ -10,6 +10,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100vw; /* 100% ширины окна браузера */
+  height: 100vh; /* 100% высоты окна браузера */
 }
 
 /* h1 {
